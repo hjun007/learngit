@@ -1,0 +1,72 @@
+====================================================================================================
+                    add                    commit                            push
+Workspace(工作区)---------->Stage(暂存区)----------->Repository(本地仓库)<---------->Remote(远程仓库)
+                                                                             pull
+=====================================================================================================
+
+
+====================================
+Normal CMD
+====================================
+1. Check status
+$ git status
+
+2. Check modifications after adding to Stage
+$ git diff file1
+
+3. Check modification logs
+$ git log	# commit logs
+$ git reflog	# rollback and commit logs
+
+=====================================
+CMD About Repository
+=====================================
+
+1. Make the current dir bacome a repo
+$ git init
+
+2. Files from Workspace to Stage
+$ git add file1 file2
+
+3. Files from Stage to Repository
+$ git commit -m "something about updating"
+
+4. Rollback to old version
+$ git reset --hard HEAD^	# to last version
+$ git reset --hard 1df3		# to a given version specified by hash value from git log
+
+=====================================
+CMD About Remote
+=====================================
+1. Associate remote repo
+$ git remote add origin git@github.com:hjun007/projet-name.git
+
+2. Push to remote repo from local repo
+$ git push origin master
+
+3. Pull to local repo from remote
+$ git pull origin master
+
+======================================
+CMD About Branch
+======================================
+1. Create branch and enter in
+$ git checkout -b newbranch
+
+2. Check branckes
+$ git branch
+
+3. Switch current branch
+$ git switch <branchName>
+$ git checkout <branchName>
+
+4. Merge pointed branch to current branch
+$ git merge <branchName>
+
+5. Delete branch
+$ git branch -d <branchName>
+$ git branch -D <branchName>	# force delete
+
+
+
+
